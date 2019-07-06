@@ -33,3 +33,9 @@ h1, h2, h3, h4, h5, h6 {
   margin:0;
   padding:0;
 }
+
+#pagination span, #pagination a, #pagination em {
+  text-align: center;
+  padding: 1em;
+  cursor: default;
+}
