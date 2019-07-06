@@ -5,3 +5,10 @@
     <p><%= p.description %><br />
   </div>
 <% end %>
+
+<div class="clear"></div>
+
+
+<div class="col-10 offset-1">
+	<%= will_paginate @places, id: 'pagination' %>
+</div>
