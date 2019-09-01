@@ -7,11 +7,22 @@
       <small><%= p.user.email %></small>
     <% end %>
   </div>
+  <% if p.comments.present? %>
+    <div class="col-12">
+      <blockquote>
+        <% if p.comments.last.humanized_rating.present? %>
+          <b><%= p.comments.last.humanized_rating %></b> - 
+        <% end %>
+        <%= p.comments.last.message%>
+        <small><%= p.comments.last.user.email %></small>
+      </blockquote>
+    </div>
+  <% end %>
+
+  <div class="clear"></div>
+
+
+  <div class="col-10 offset-1">
+  	<%= will_paginate @places, id: 'pagination' %>
+  </div>
 <% end %>
-
-<div class="clear"></div>
-
-
-<div class="col-10 offset-1">
-	<%= will_paginate @places, id: 'pagination' %>
-</div>
