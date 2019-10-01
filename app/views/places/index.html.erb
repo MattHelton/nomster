@@ -18,6 +18,14 @@
       </blockquote>
     </div>
   <% end %>
+  <% if p.photos.present? %>
+    <div class="col-12">
+      <blockquote>
+        <div class="photos-index float-right">
+          <%= image_tag p.photos.first.picture.to_s, class: 'index-image-size' %>
+        </div>
+      </blockquote>
+  <% end %>
 
   <div class="clear"></div>
 
